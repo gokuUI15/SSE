@@ -54,7 +54,7 @@ body {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: clamp(0.5rem, 6vw, 2rem);
   color: #fff;
   font-weight: 700;
   text-shadow: 0 0 10px #ffcc00;
