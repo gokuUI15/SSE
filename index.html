@@ -1,666 +1,328 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700;1,800&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-body {
-  width: 100%;
-  height: 100%;
-  min-height: 100vh;
-  background: linear-gradient(
-    -45deg,
-    #0f2027,
-    #2c5364,
-    #a1c4fd,
-    #a595a0,
-    #af9fa0,
-    #0c181e,
-    #0a171c
-  );
-  background-size: 500% 500%;
-  animation: gradientShift 8s ease infinite;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", sans-serif;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
 
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-/* Navbar ---header  ===== */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.2rem 3rem;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 999;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
+<body>
+    <header class="navbar">
+        <div class="logo">Shree Shyam Enterprises</div>
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#Products">Products</a>
+            <a href="#about">About</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <!-- <div class="hamburger" id="hamburger">
+            <i class="fa-solid fa-bars"></i>
+        </div> -->
+    </header>
 
-.logo {
-  font-size: clamp(0.5rem, 6vw, 2rem);
-  color: #fff;
-  font-weight: 700;
-  text-shadow: 0 0 10px #ffcc00;
-}
+    <section class="home-section">
+        <div class="home-wrapper">
+            <div class="home-left glass">
+                <h1>Welcome to <span>Shree Shyam Enterprises</span></h1>
+                <p>Electrify Your World with <span>Shree Shyam Enterprises</span></p>
+                <a href="#Products" class="btn">Explore Products</a>
+            </div>
 
-.nav-links {
-  display: flex;
-  gap: 2rem;
-}
+            <div class="home-right">
+                <div class="circle-image">
+                    <img src="logo.png" alt="logo">
+                </div>
+            </div>
+        </div>
+    </section>
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  position: relative;
-  transition: color 0.3s ease;
-}
+    <section class="Products-section" id="Products">
+        <h2 class="section-title">Scooties &Bike</h2>
+        <div class="Products-grid">
 
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2px;
-  bottom: -3px;
-  left: 0;
-  background-color: #ffcc00;
-  transition: 0.4s ease;
-}
+            <div class="Products-card">
+                <img src="Empire +2.o.png" alt="Empire +2.o">
+                <h3>Empire +2.o</h3>
+                <p>ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <span class="price">₹199</span>
 
-.nav-links a:hover {
-  color: #ffcc00;
-}
-.nav-links a:hover::after {
-  width: 100%;
-}
+            <div class="Products-card">
+                <img src="Flycon Grove.png" alt="Flycon Grove">
+                <h3>Flycon Grove</h3>
+                <p>Classic thin trust with spicy tomato.</p>
+                <span class="price">₹299</span>
+            </div>
 
-/* .hamburger {
-  display: none;
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
-} */
+            <div class="Products-card">
+                <img src="Flycon T3.png" alt="Flycon T3">
+                <h3>Flycon T3</h3>
+                <p>Rich Creamy Pasta with garlic bread.</p>
+                <span class="price">₹49</span>
+            </div>
 
-/* home-section---------------> */
-.home-section {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 2rem;
-}
-.home-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1200px;
-  width: 100%;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-.home-left {
-  flex: 1;
-  padding: 2.5rem;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
-  animation: fadeInUp 1.3s ease;
-}
+            <div class="Products-card">
+                <img src="Grove Lite.png" alt="Grove Lite">
+                <h3>Grove Lite</h3>
+                <p>ipsum dolor, sit amet consectetur adipisicing elit. Accusantium.</p>
+                <span class="price">₹39</span>
+            </div>
 
-.home-left h1 {
-  font-size: clamp(1rem, 6vw, 3rem);
-  color: #fff;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 10px #ffcc00;
-}
+            <div class="Products-card">
+                <img src="Sway.png" alt="Sway">
+                <h3>Sway</h3>
+                <p>dolor, sit amet consectetur adipisicing elit. Accusantium.</p>
+                <span class="price">₹89</span>
+            </div>
+        </div>
+    </section>
 
-.home-left h1 span {
-  color: #ffcc00;
-}
-.home-left p {
-  font-size: clamp(0.3rem, 1rem, 2rem);
-  color: #eee;
-  margin-bottom: 2rem;
-}
-.btn {
-  background: #ffcc00;
-  color: #000;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s ease;
-  box-shadow: 0 0 20px #ffcc00a1;
-}
-.btn:hover {
-  background: #fff;
-  color: #000;
-  transform: scale(1.05);
-}
-.home-right {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.circle-image {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  overflow: hidden;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
-  border: 6px solid rgba(255, 255, 255, 0.3);
-  animation: popIn 1.5s ease;
-}
-.circle-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    <section class="Products-section" id="Products">
+        <h2 class="section-title">Other Electronics Item</h2>
+        <div class="Products-grid">
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes popIn {
-  0% {
-    transform: scale(0);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
+            <div class="Products-card">
+                <img src="TV.png" alt="burger">
+                <h3>Television</h3>
+                <p>ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <span class="price">₹199</span>
+        
 
-/* Products-section------------> */
+            <div class="Products-card">
+                <img src="Washing Machine.png" alt="Washing Machine">
+                <h3>Washing machine</h3>
+                <p>Classic thin trust with spicy tomato.</p>
+                <span class="price">₹299</span>
+            </div>
 
-.Products-section {
-  padding: 5rem 2rem;
-  text-align: center;
-  color: #fff;
-}
-.section-title {
-  font-size: clamp(2rem, 6vw, 2.9rem);
-  margin-bottom: 2rem;
-  color: #ffcc00;
-  text-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
-}
-.Products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.Products-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(18px);
-  border-radius: 20px;
-  padding: 1.5rem;
-  text-align: center;
-  transition: 0.4s ease;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-}
-.Products-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: contain;
-  border-radius: 0.1rem;
-  transition: 0.4s ease;
-}
-.Products-card h3 {
-  font-size: 1.4rem;
-  margin: 0.5rem 0;
-  color: #fff;
-}
-.Products-card p {
-  font-size: 0.95;
-  color: #ddd;
-  margin-bottom: 0.5rem;
-}
-.Products-card .price {
-  font-size: 1.1rem;
-  color: #ffcc00;
-  font-weight: bold;
-  display: inline-block;
-}
-.Products-card:hover {
-  transform: translateY(-10px) scale(1.04);
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 40px rgba(255, 204, 0, 0.3);
-}
-.Products-card:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
-}
+            <div class="Products-card">
+                <img src="Refrigerator.png" alt="Pasta">
+                <h3>Refrigerator</h3>
+                <p>Rich Creamy Pasta with garlic bread.</p>
+                <span class="price">₹49</span>
+            </div>
 
-/* about-section---------------> */
-.about-section {
-  padding: 5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-}
-.about-container {
-  display: flex;
-  gap: 3rem;
-  max-width: 1200px;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.about-image img {
-  width: 320px;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
-  transition: transform 0.5s ease;
-}
-.about-image img:hover {
-  transform: scale(1.05);
-}
-.about-content {
-  flex: 1;
-  max-width: 600px;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(18px);
-  padding: 2rem 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
-  color: #fff;
-  animation: fadeInRight 1.5s ease forwards;
-  opacity: 0;
-}
-.about-content h2 {
-  font-size: clamp(1.5rem, 6vw, 2.8rem);
-  margin-bottom: 1rem;
-  color: #ffcc00;
-  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-}
-.about-content h2 span {
-  color: #fff;
-}
-.about-content p {
-  font-size: 1rem;
-  line-height: 1.7;
-  margin-bottom: 1.2rem;
-  color: #ddd;
-}
-.btn-glass {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffcc00;
-  font-weight: bold;
-  transition: 0.4s ease;
-  backdrop-filter: blur(10px);
-}
-.btn-glass:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px #ffcc00;
-}
-@keyframes fadeInRight {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+            <div class="Products-card">
+                <img src="Air Conditioner.png" alt="noodles">
+                <h3>Air Conditioner</h3>
+                <p>ipsum dolor, sit amet consectetur adipisicing elit. Accusantium.</p>
+                <span class="price">₹39</span>
+            </div>
 
-/* gallery-section--------------> */
-.gallery-section {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: transparent;
-}
-.gallery-section .section-title {
-  font-size: clamp(1.5rem, 6vw, 2.8rem);
-  margin-bottom: 3rem;
-  color: #ffcc00;
-  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-}
-.gallery-item img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  border-radius: 20px;
-}
-.gallery-item:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 40px rgba(255, 204, 0, 0.3);
-}
-.gallery-item:hover img {
-  transform: scale(1.08);
-}
-/* choose-section--------------> */
-/* .choose-section {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: transparent;
-  color: #fff;
-}
-.choose-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+            <div class="Products-card">
+                <img src="Water Heater.png" alt="Wrap">
+                <h3>Water Heater</h3>
+                <p>dolor, sit amet consectetur adipisicing elit. Accusantium.</p>
+                <span class="price">₹89</span>
+            </div>
 
-.choose-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 2rem 1.5rem;
-  transition: 0.4s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
+            <div class="Products-card">
+                <img src="Ceiling Fan.png" alt="Fries">
+                <h3>Ceiling Fan</h3>
+                <p>ipsum dolor sit amet consectetur adipisicing.</p>
+                <span class="price">₹109</span>
+            </div>
 
-.choose-card i {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #ffcc00;
-}
+            <div class="Products-card">
+                <img src="Mixer.png" alt="Soup">
+                <h3>Mixer</h3>
+                <p>ipsum dolor sit amet consectetur adipisicing.</p>
+                <span class="price">₹49</span>
+            </div>
 
-.choose-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-.choose-card p {
-  font-size: 0.95rem;
-  color: #eee;
-}
-.choose-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(255, 204, 0, 0.3);
-} */
+            </div>
+        </div>
+    </section>
 
-/* testimonials-section------------> */
-.testimonials-section {
-  padding: 5rem 2rem;
-  text-align: center;
-  background: transparent;
-  color: #fff;
-}
-.testimonial-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.testimonial-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: 0.4s ease;
-  padding: 2rem 1.5rem;
-}
-.testimonial-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 30px rgba(255, 204, 0, 0.3);
-}
-.testimonial-card img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border: 2px solid #ffcc00;
-}
-.testimonial-card h3 {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 0.5rem;
-}
-.testimonial-card p {
-  font-size: 0.95rem;
-  color: #eee;
-  margin-bottom: 0.8rem;
-}
-.star {
-  color: #ffcc00;
-  font-size: 1.2rem;
-  letter-spacing: 2px;
-}
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="Restaurant Interior.jpg" alt="Restaurant Interior">
+            </div>
 
-/* footer--------------------> */
-.footer {
-  background: linear-gradient(to right, #2c15001b, #0f2027);
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  padding: 60px 20px 20px;
-}
-.footer-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-.footer-box {
-  flex: 1 1 220px;
-  min-width: 250px;
-}
-.footer h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: #ffcc70;
-}
-.footer h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
-  color: #ffcc70;
-}
-.footer p,
-.footer a {
-  font-size: 14px;
-  color: #ddd;
-  text-decoration: none;
-  line-height: 1.8;
-  transition: color 0.3s ease;
-}
-.footer a:hover {
-  color: #fff;
-}
-.socials {
-  display: flex;
-  gap: 15px;
-  margin-top: 15px;
-}
-.socials a {
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  transition: 0.3s ease;
-  font-size: 18px;
-}
+            <div class="about-content">
+                <h2>About <span>Shree Shyam Enterprises</span></h2>
+                <p>Welcom to <strong>Shree Shyam Enterprises</strong>,Welcome to Shree Shyam Enterprises, where passion meets performance. We offer a wide range of electric products including electric scooters, fridges, coolers, and more — all at affordable prices.
+                </p>
+                <p>
+                    Visit us today and experience quality, trust, and service under one roof.
+                </p>
+                <a href="#product" class="btn-glass">Explore product</a>
+            </div>
+        </div>
+    </section>
 
-.socials a:hover {
-  background: #fff;
-  color: #000;
-  transform: scale(1.2);
-}
-.contact p i {
-  margin-right: 10px;
-  color: #ffcc70;
-}
-.app-download {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
-.app-download img {
-  width: 120px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-.app-download img:hover {
-  transform: scale(1.05);
-}
-.footer-bottom {
-  text-align: center;
-  padding: 20px 10px 0;
-  font-size: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 25px;
-}
-.footer-bottom i {
-  margin: 0 5px;
-  font-size: 18px;
-  color: #ffcc70;
-}
+    <section class="gallery-section" id="gallery">
+        <h2 class="section-title">Our Gallery</h2>
 
+        <div class="gallery-grid">
 
-/* Responsive---------------> */
-@media (max-width: 780px) {
-  .nav-links {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(10px);
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    width: 100%;
-    padding: 1.5rem;
-    display: none;
-  }
-  .nav-links.show {
-    display: flex;
-  }
-  .hamburger {
-    display: block;
-  }
+            <div class="gallery-item">
+                <img src="Flycon T3.png" alt="Flycon T3">
+            </div>
 
-  .home-wrapper {
-    flex-direction: column;
-    text-align: center;
-  }
+            <div class="gallery-item">
+                <img src="Flycon Grove.png" alt="Flycon Grove">
+            </div>
 
-  .home-left,
-  .home-right {
-    width: 100%;
-  }
-  .circle-image {
-    width: 250px;
-    height: 250px;
-    margin-top: 1rem;
-  }
+            <div class="gallery-item">
+                <img src="Grove Lite.png" alt="Grove Lite">
+            </div>
 
-  .Products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+            <div class="gallery-item">
+                <img src="Sway.png" alt="Sway">
+            </div>
 
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .about-image img {
-    margin-bottom: 1.5rem;
-  }
-  .about-content {
-    animation: fadeInUp 1.5s ease forwards;
-  }
+            <div class="gallery-item">
+                <img src="TV.png" alt="TV">
+            </div>
 
-  @keyframes fadeInUp {
-    0% {
-      transform: translateY(50px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
+            <div class="gallery-item">
+                <img src="Air Conditioner.png" alt="Air Conditioner">
+            </div>
 
-  .gallery-item img {
-    height: 300px;
-  }
+            <div class="gallery-item">
+                <img src="Mixer.png" alt="Refrigerator">
+            </div>
 
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .socials {
-    justify-content: center;
-  }
-  .app-download {
-    justify-content: center;
-  }
-}
+            <div class="gallery-item">
+                <img src="Ceiling Fan.png" alt="Ceiling Fan">
+            </div>
+        </div>
+    </section>
 
-@media (max-width: 550px) {
-  .Products-grid {
-    grid-template-columns: 1fr;
-  }
-}
+    <!-- <section class="choose-section" id="why-choose">
+        <h2 class="section-title">Why choose Us</h2>
+
+        <div class="choose-grid">
+
+            <div class="choose-card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Fresh Ingredients</h3>
+                <p>ipsum dolor sit, amet consectetur adipisicing elit. Earum eveniet animi ipsum!</p>
+            </div>
+
+            <div class="choose-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>ipsum dolor sit, amet consectetur adipisicing elit. Earum eveniet animi ipsum!</p>
+            </div>
+
+            <div class="choose-card">
+                <i class="fa-solid fa-award"></i>
+                <h3>Quality Food</h3>
+                <p>ipsum dolor sit, amet consectetur adipisicing elit. Earum eveniet animi ipsum!</p>
+            </div>
+
+            <div class="choose-card">
+                <i class="fa-solid fa-hands-bubbles"></i>
+                <h3>Hygiene First</h3>
+                <p>ipsum dolor sit, amet consectetur adipisicing elit. Earum eveniet animi ipsum!</p>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title">What Our Customers Say</h2>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+                <img src="amrita morya.png" alt="Customer 1">
+                <h3>amrita morya</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore non illo ad quas?</p>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="Sarah K.jpg" alt="Customer 2">
+                <h3>Sarah K</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore non illo ad quas?</p>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <img src="Rina Thomas.png" alt="Customer 3">
+                <h3>Ina Thomas</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore non illo ad quas?</p>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+
+            <div class="footer-box about">
+                <h2>Shree Shyam Enterprises</h2>
+                <p>Your trusted destination for electric vehicles, home appliances, and everyday electronics.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box links">
+                <h3>Our Products</h3>
+                <a href="#">Electric Scooters</a>
+                <a href="#">Desert Coolers</a>
+                <a href="#">Refrigerator</a>
+                <a href="#">Small Home Appliances</Small></a>
+            </div>
+
+            <div class="footer-box links">
+                <h3>Useful Links</h3>
+                <a href="#">About Us</a>
+                <a href="#">Contact</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <div class="footer-box contact">
+                <p><i class="fa-solid fa-phone"></i> +91 9057702592</p>
+                <p><i class="fa-solid fa-envelope"></i> info@shreeshyamenterprises.in</p>
+                <p><i class="fa-solid fa-location-dot"></i> <a href="https://maps.app.goo.gl/dXha1iBX26XpqDF37" target="_blank" rel="noopener noreferrer">https://maps.app.goo.gl/dXha1iBX26XpqDF37</a></p>
+                <div class="app-download">
+                    <a href="#"><img src="app2.png" alt="Google play"></a>
+                    <a href="#"><img src="app1.png" alt="App Store"></a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy;2025 <strong>Shree Shyam Enterprises </strong>. All right reserved. | Accepts:</p>
+            <i class="fa-brands fa-paypal"></i>
+            <i class="fa-brands fa-cc-visa"></i>
+            <i class="fa-brands fa-cc-mastercard"></i>
+            <i class="fa-brands fa-cc-amex"></i>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
