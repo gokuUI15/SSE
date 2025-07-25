@@ -39,10 +39,12 @@ body {
 }
 /* Navbar ---header  ===== */
 
-#home {
-  padding-top: 100px; /* slightly more than the header height */
+html {
+  scroll-padding-top: 100px; /* adjust based on actual header height */
 }
-
+section {
+  scroll-margin-top: var(--header-height);
+}
 .header {
   width: 100%;
   backdrop-filter: blur(10px); /* Blur effect */
@@ -258,6 +260,29 @@ body {
   border-radius: 0.1rem;
   transition: 0.4s ease;
 }
+
+.specs-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
+  background: #ffffff00;
+  font-family: sans-serif;
+}
+
+.spec-item {
+  flex: 1 1 200px;
+  min-width: 200px;
+  text-align: center;
+  background: #102A43;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #110267;
+}
+
+
+
 .Products-card h3 {
   font-size: 1.4rem;
   margin: 0.5rem 0;
