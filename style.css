@@ -38,6 +38,9 @@ body {
   }
 }
 /* Navbar ---header  ===== */
+#home {
+  padding-top: 100px; /* slightly more than the header height */
+}
 .header {
   position: fixed;
   top: 0;
