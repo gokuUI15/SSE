@@ -22,7 +22,7 @@ body {
   background-size: 500% 500%;
   animation: gradientShift 8s ease infinite;
   margin: 0;
-  padding: 0;
+  padding-top: 100px;
   font-family: "Poppins", sans-serif;
 }
 
