@@ -38,12 +38,12 @@ body {
   }
 }
 /* Navbar ---header  ===== */
+
 #home {
   padding-top: 100px; /* slightly more than the header height */
 }
+
 .header {
-  position: fixed;
-  top: 0;
   width: 100%;
   backdrop-filter: blur(10px); /* Blur effect */
   background: rgba(255, 255, 255, 0.1); /* Transparent background */
