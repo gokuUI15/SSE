@@ -39,7 +39,21 @@ body {
 }
 /* Navbar ---header  ===== */
 .header {
-  height: clamp(50px, 25vh, 100px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(10px); /* Blur effect */
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 1rem 2rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Responsive text sizing */
+  font-size: clamp(1rem, 2vw, 2rem); 
+  height: clamp(60px, 10vh, 120px);  /* Responsive height */
 }
 
 .navbar {
