@@ -38,6 +38,10 @@ body {
   }
 }
 /* Navbar ---header  ===== */
+.header {
+  height: clamp(50px, 25vh, 100px);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
